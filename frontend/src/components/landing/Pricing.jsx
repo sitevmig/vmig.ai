@@ -1,5 +1,8 @@
-import { Check, Zap, Plus } from "lucide-react";
+import { useState } from "react";
+import { Check, Zap, Plus, Calculator } from "lucide-react";
 import { Reveal, SectionHead } from "./Reveal";
+
+const DURATIONS = [15, 30, 60];
 
 const TARIFFS = [
   {
@@ -74,7 +77,17 @@ const PACKAGES = [
   { seconds: "90 секунд", price: "1 790 ₽" },
 ];
 
+const migsOf = (t) => parseInt(t.migs.replace(/\s/g, ""), 10);
+const priceOf = (t) => parseInt(t.price.replace(/\s/g, ""), 10);
+
 export const Pricing = ({ onSelect }) => {
+  const [videos, setVideos] = useState(10);
+  const [duration, setDuration] = useState(15);
+  const needMigs = videos * duration;
+  const recommended =
+    TARIFFS.find((t) => migsOf(t) >= needMigs) || TARIFFS[TARIFFS.length - 1];
+  const perVideo = Math.round(priceOf(recommended) / videos);
+
   const choose = (t) => {
     onSelect(`${t.name} (${t.price} ₽)`);
     document.querySelector("#contacts")?.scrollIntoView({ behavior: "smooth" });
@@ -91,7 +104,84 @@ export const Pricing = ({ onSelect }) => {
           subtitle="1 миг = 1 секунда видео с аватаром. Слайдшоу и фоны лимит не расходуют."
         />
 
-        <div className="mt-14 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <Reveal>
+          <div
+            data-testid="mig-calculator"
+            className="mt-12 rounded-2xl border border-white/10 bg-[#121217] p-7 sm:p-9"
+          >
+            <div className="flex items-center gap-3">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-rose-600/15 text-rose-500">
+                <Calculator size={18} />
+              </span>
+              <h3 className="font-display text-lg sm:text-xl font-semibold">
+                Сколько роликов вам нужно?
+              </h3>
+            </div>
+            <div className="mt-7 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
+              <div>
+                <div className="flex items-baseline justify-between gap-4">
+                  <label htmlFor="mig-calc-slider" className="text-sm text-slate-400">
+                    Роликов с аватаром в месяц
+                  </label>
+                  <span data-testid="mig-calc-videos-value" className="font-display text-3xl font-extrabold text-white">
+                    {videos}
+                  </span>
+                </div>
+                <input
+                  id="mig-calc-slider"
+                  data-testid="mig-calc-slider"
+                  type="range"
+                  min={1}
+                  max={80}
+                  value={videos}
+                  onChange={(e) => setVideos(Number(e.target.value))}
+                  className="mt-4 w-full accent-rose-600 cursor-pointer"
+                />
+                <div className="mt-5 flex flex-wrap items-center gap-3">
+                  <span className="text-sm text-slate-400">Длина ролика:</span>
+                  {DURATIONS.map((d) => (
+                    <button
+                      key={d}
+                      type="button"
+                      data-testid={`mig-calc-duration-${d}`}
+                      onClick={() => setDuration(d)}
+                      className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
+                        duration === d
+                          ? "bg-rose-600 text-white"
+                          : "border border-white/15 text-slate-300 hover:border-rose-500/60"
+                      }`}
+                    >
+                      {d} сек
+                    </button>
+                  ))}
+                </div>
+              </div>
+              <div
+                data-testid="mig-calc-result"
+                className="rounded-xl border border-rose-500/30 bg-rose-600/5 p-6"
+              >
+                <p className="text-xs text-slate-500">
+                  Вам нужно ≈ <span className="font-semibold text-slate-200">{needMigs} мигов</span> в месяц
+                </p>
+                <p className="mt-2 font-display text-xl font-bold">
+                  Ваш тариф — <span className="text-rose-500">{recommended.name}</span>
+                </p>
+                <p className="mt-1 text-sm text-slate-400">
+                  {recommended.price} ₽/мес · ≈ {perVideo} ₽ за ролик
+                </p>
+                <button
+                  onClick={() => choose(recommended)}
+                  data-testid="mig-calc-cta"
+                  className="mt-4 w-full rounded-full bg-rose-600 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-rose-500"
+                >
+                  Оставить заявку на «{recommended.name}»
+                </button>
+              </div>
+            </div>
+          </div>
+        </Reveal>
+
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {TARIFFS.map((t, i) => (
             <Reveal key={t.id} delay={i * 0.1} className="h-full">
               <div
@@ -100,7 +190,7 @@ export const Pricing = ({ onSelect }) => {
                   t.popular
                     ? "border-rose-500/60 bg-[#181820] shadow-[0_0_60px_rgba(225,29,72,0.15)] xl:-translate-y-3"
                     : "border-white/10 bg-[#121217] hover:border-white/25"
-                }`}
+                } ${t.id === recommended.id ? "ring-2 ring-rose-500/70" : ""}`}
               >
                 {t.popular && (
                   <span
@@ -108,6 +198,14 @@ export const Pricing = ({ onSelect }) => {
                     className="animate-pulse-glow absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-rose-600 px-4 py-1.5 font-mono text-[10px] font-bold tracking-widest uppercase text-white"
                   >
                     Популярный
+                  </span>
+                )}
+                {t.id === recommended.id && (
+                  <span
+                    data-testid={`tariff-recommended-${t.id}`}
+                    className="absolute -top-3 right-4 rounded-full border border-rose-500/50 bg-[#070709] px-3 py-1 font-mono text-[10px] tracking-widest uppercase text-rose-400"
+                  >
+                    Подходит вам
                   </span>
                 )}
                 <p className="text-xs text-slate-500">{t.forWhom}</p>
