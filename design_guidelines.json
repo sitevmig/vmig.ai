@@ -1,0 +1,298 @@
+{
+  "project_name": "Вмиг - AI Video Generation Platform (vmig.ai)",
+  "app_type": "landing_page",
+  "language": "ru",
+  "currency": "RUB (₽)",
+  "design_philosophy": {
+    "concept": "Anti-AI Slop, High-impact Editorial Kinetic Landing Page",
+    "theme": "Dark / Neon Tech Hybrid with Brand High Voltage Red Accent",
+    "archetype": "ARCHETYPE 7: ELECTRIC & NEON / PERFORMANCE PRO",
+    "core_feeling": "Speed, Precision, AI Innovation, Professional Video Quality in 5 Minutes"
+  },
+  "typography": {
+    "font_family_headings": "Unbounded, sans-serif",
+    "font_family_body": "Manrope, sans-serif",
+    "font_family_mono": "JetBrains Mono, monospace",
+    "hierarchy": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-extrabold tracking-tight leading-none font-['Unbounded']",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight font-['Unbounded']",
+      "h3": "text-xl sm:text-2xl font-semibold tracking-normal font-['Unbounded']",
+      "h4": "text-lg sm:text-xl font-medium",
+      "body_lg": "text-lg sm:text-xl leading-relaxed text-slate-300 font-['Manrope']",
+      "body": "text-base leading-relaxed text-slate-400 font-['Manrope']",
+      "caption": "text-xs sm:text-sm tracking-widest uppercase font-mono text-rose-400"
+    }
+  },
+  "colors": {
+    "background": "#070709",
+    "surface": "#121217",
+    "surface_card": "#181820",
+    "surface_glass": "rgba(24, 24, 32, 0.75)",
+    "border_subtle": "rgba(255, 255, 255, 0.08)",
+    "border_glow": "rgba(244, 63, 94, 0.4)",
+    "text_primary": "#F8FAFC",
+    "text_secondary": "#94A3B8",
+    "text_muted": "#64748B",
+    "accent_primary": "#E11D48",
+    "accent_primary_hover": "#F43F5E",
+    "accent_glow": "rgba(225, 29, 72, 0.25)",
+    "accent_secondary": "#8B5CF6",
+    "badge_popular": "#E11D48",
+    "success": "#10B981"
+  },
+  "visual_enhancers": {
+    "noise_overlay": "Subtle SVG grain texture overlay with opacity 0.03",
+    "glow_effects": "Radial ambient glows behind hero and popular pricing cards (bg-rose-600/20 blur-3xl)",
+    "tracing_beam": "Interactive or subtle border glow animation on featured tariff card ('Про')",
+    "glassmorphism": "backdrop-blur-xl bg-slate-950/80 border border-white/10"
+  },
+  "layout_and_structure": {
+    "navigation": {
+      "header_style": "Sticky top-0 z-50 glassmorphism with blur backdrop-blur-md bg-[#070709]/80 border-b border-white/10",
+      "logo": "Вмиг (vmig.ai) with kinetic red energy icon",
+      "links": [
+        {"label": "Преимущества", "href": "#features"},
+        {"label": "Форматы", "href": "#formats"},
+        {"label": "Как работает", "href": "#how-it-works"},
+        {"label": "Тарифы", "href": "#pricing"},
+        {"label": "Контакты", "href": "#contacts"}
+      ],
+      "cta": "Попробовать бесплатно (5 роликов)",
+      "cta_action": "Scrolls to free trial form / triggers modal"
+    },
+    "sections": [
+      {
+        "id": "hero",
+        "title": "Вмиг делает ролик за минуты",
+        "subtitle": "Рекламные видео для соцсетей (Reels, TikTok, Shorts, VK) с ИИ-аватаром и русский липсинком. Без съемок, монтажеров и операторов.",
+        "highlights": [
+          "5 минут от идеи до готового ролика",
+          "Первые 5 роликов бесплатно",
+          "Без привязки банковской карты"
+        ],
+        "cta_primary": "Создать первый ролик бесплатно",
+        "cta_secondary": "Посмотреть тарифы",
+        "visual_element": "Interactive 3D/Parallax smartphone card or video preview frame showcasing vertical video format with AI avatar"
+      },
+      {
+        "id": "problem",
+        "title": "Видео нужно постоянно. А делать его дорого",
+        "subtitle": "При классическом производстве малый бизнес тратит десятки тысяч рублей или отказывается от видео вовсе.",
+        "stat_cards": [
+          {
+            "metric": "от 4 000 ₽",
+            "label": "Стоит 1 Reels у фрилансера",
+            "desc": "Долго, переменчивый результат"
+          },
+          {
+            "metric": "от 120 000 ₽",
+            "label": "Серия из 10 роликов у подрядчика",
+            "desc": "Бюджет доступный не каждому"
+          },
+          {
+            "metric": "3 дня – 3 недели",
+            "label": "Срок от идеи до готового видео",
+            "desc": "Контент-план срывается"
+          }
+        ],
+        "pain_points": [
+          "Съемка, монтаж, озвучка и оформление — 4 разных подрядчика",
+          "Каждая правка стоит денег и занимает от трех дней",
+          "Для эффективной рекламы нужно 10–15 разных роликов в месяц"
+        ]
+      },
+      {
+        "id": "how-it-works",
+        "title": "Как работает Вмиг",
+        "subtitle": "Все, что вам нужно — браузер и 5 минут свободного времени",
+        "steps": [
+          {
+            "step": "01",
+            "title": "Опишите задачу",
+            "desc": "Введите текст или опишите ролик своими словами. Или загрузите нужные фото товаров."
+          },
+          {
+            "step": "02",
+            "title": "Платформа генерирует",
+            "desc": "ИИ создает видео с аватаром, идеальной озвучкой и синхронной артикуляцией на русском языке."
+          },
+          {
+            "step": "03",
+            "title": "Скачивайте и публикуйте",
+            "desc": "Готовый вертикальный ролик формата Reels, TikTok, Shorts или VK Клипы готов к публикации!"
+          }
+        ],
+        "features_grid": [
+          {"title": "Живой русский липсинк", "desc": "Аватар говорит естественно, артикуляция на 100% совпадает со звуком"},
+          {"title": "Ваши фото и товары", "desc": "Загрузите фото товаров, и платформа соберет из них динамичный ролик"},
+          {"title": "Готовые фоны и переходы", "desc": "B-roll входит во все тарифы без ограничений и расхода лимита"}
+        ]
+      },
+      {
+        "id": "formats",
+        "title": "Три формата под любые задачи",
+        "subtitle": "Генерируйте именно тот контент, который принесет вам продажи",
+        "items": [
+          {
+            "badge": "Формат 1",
+            "title": "Видео с ИИ-аватаром",
+            "desc": "Говорящий аватар с естественным русским липсинком. Идеально для объяснений, офферов, обучения и сторителлинга.",
+            "link_examples": "https://drive.google.com/drive/folders/1cF-qW-8uMi3hi-eNde6RspxhDDcLnS9j"
+          },
+          {
+            "badge": "Формат 2",
+            "title": "Слайдшоу из ваших фото",
+            "desc": "Загрузите фото продукта или услуги и получите видео с озвучкой. Входит в базовый тариф без расхода мигов!",
+            "link_examples": "https://drive.google.com/drive/folders/1oT1vqPBRyRygBBHCQEvMer_HBfQ6h5bM"
+          },
+          {
+            "badge": "Формат 3",
+            "title": "Ролики для маркетплейсов",
+            "desc": "Карточка товара, описание и ключевые свойства превращаются в продающий ролик для Wildberries, Ozon, Yandex Market.",
+            "link_examples": "https://drive.google.com/drive/u/0/folders/1oT1vqPBRyRygBBHCQEvMer_HBfQ6h5bM"
+          }
+        ]
+      },
+      {
+        "id": "pricing",
+        "title": "Прозрачные тарифы под ваш масштаб",
+        "subtitle": "1 миг = 1 секунда видео с аватаром. Слайдшоу и фоны лимит НЕ расходуют.",
+        "tariffs": [
+          {
+            "id": "start",
+            "name": "Старт",
+            "for_whom": "Небольшой бизнес и блогеры",
+            "price": "1 990",
+            "period": "₽/мес",
+            "migs": "120 мигов",
+            "migs_desc": "≈ 8 роликов с аватаром по 15 секунд",
+            "features": [
+              "Слайдшоу из своих фото — без лимита",
+              "Автопостинг в соцсети",
+              "Базовая аналитика охватов",
+              "Качество 720p"
+            ],
+            "is_popular": false,
+            "cta": "Выбрать Старт"
+          },
+          {
+            "id": "pro",
+            "name": "Про",
+            "for_whom": "Продавцы и активный контент",
+            "price": "5 500",
+            "period": "₽/мес",
+            "migs": "315 мигов",
+            "migs_desc": "≈ 21 ролик с аватаром по 15 секунд",
+            "features": [
+              "Всё из тарифа Старт",
+              "Полная аналитика с прогнозом контента",
+              "Свой фон по промпту",
+              "Замена аватара и своя музыка",
+              "Качество 720p"
+            ],
+            "is_popular": true,
+            "popular_badge": "ПОПУЛЯРНЫЙ",
+            "cta": "Выбрать Про"
+          },
+          {
+            "id": "max",
+            "name": "Макс",
+            "for_whom": "Агентства и активные продавцы",
+            "price": "11 900",
+            "period": "₽/мес",
+            "migs": "690 мигов",
+            "migs_desc": "≈ 46 роликов с аватаром по 15 секунд",
+            "features": [
+              "Всё из тарифа Про",
+              "Объем для ежедневного постинга",
+              "Приоритетная генерация",
+              "Качество 720p"
+            ],
+            "is_popular": false,
+            "cta": "Выбрать Макс"
+          },
+          {
+            "id": "business",
+            "name": "Бизнес",
+            "for_whom": "Команды и крупные агентства",
+            "price": "37 900",
+            "period": "₽/мес",
+            "migs": "1 200 мигов",
+            "migs_desc": "≈ 80 роликов с аватаром по 15 секунд",
+            "features": [
+              "Всё из тарифа Макс",
+              "5 учетных записей (больше по согласованию)",
+              "Персональные условия тарифа",
+              "Приоритетная поддержка"
+            ],
+            "is_popular": false,
+            "cta": "Связаться для Бизнес"
+          }
+        ],
+        "extra_packages": {
+          "title": "Закончились миги? Докупайте пакетом в любой момент:",
+          "options": [
+            {"seconds": "30 секунд", "price": "690 ₽"},
+            {"seconds": "60 секунд", "price": "1 290 ₽"},
+            {"seconds": "90 секунд", "price": "1 790 ₽"}
+          ]
+        }
+      },
+      {
+        "id": "free-trial",
+        "title": "Первые 5 роликов — бесплатно",
+        "subtitle": "Посмотрите на результат в действии, прежде чем принимать решение.",
+        "steps": [
+          {"num": "1", "title": "Регистрация", "text": "2 минуты, без привязки банковской карты"},
+          {"num": "2", "title": "5 роликов бесплатно", "text": "Генерация в тот же день в онлайн-кабинете"},
+          {"num": "3", "title": "Оплата", "text": "Только если вам действительно понравится результат"}
+        ]
+      },
+      {
+        "id": "contacts",
+        "title": "Начните создавать ролики Вмиг",
+        "subtitle": "Оставьте заявку на бесплатный тест или задайте любой вопрос нашей команде",
+        "target_email": "vmig.ai@mail.ru",
+        "form_fields": [
+          {"name": "name", "label": "Ваше имя", "type": "text", "placeholder": "Иван Иванов", "required": true},
+          {"name": "contact", "label": "Email или Телефон / Telegram", "type": "text", "placeholder": "example@mail.ru или @username", "required": true},
+          {"name": "tariff", "label": "Интересующий тариф / вопрос", "type": "select", "options": ["Тестовый доступ (5 роликов бесплатно)", "Старт (1 990 ₽)", "Про (5 500 ₽)", "Макс (11 900 ₽)", "Бизнес (37 900 ₽)", "Другой вопрос"]},
+          {"name": "message", "label": "Комментарий или задача", "type": "textarea", "placeholder": "Опишите, какие ролики хотите создавать...", "required": false}
+        ],
+        "submit_button_text": "Отправить заявку в Вмиг",
+        "email_submission_behavior": "Simulate instant submission toast + mailto backup link sending form data to vmig.ai@mail.ru"
+      }
+    ]
+  },
+  "image_urls": {
+    "hero_avatar_preview": "https://images.unsplash.com/photo-1733937109153-9766651fbe12?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "content_creator": "https://images.unsplash.com/photo-1695192695436-afd4f21ecdb2?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "video_production_studio": "https://images.unsplash.com/photo-1597263072644-0e60b7541af4?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "vertical_smartphone": "https://images.unsplash.com/photo-1750056393326-8feed2a1c34f?crop=entropy&cs=srgb&fm=jpg&q=85",
+    "neon_lighting_ambiance": "https://images.unsplash.com/photo-1597263072880-4d301f5bb8a0?crop=entropy&cs=srgb&fm=jpg&q=85"
+  },
+  "motion_and_animations": {
+    "library": "framer-motion",
+    "scroll_smoothness": "lenis",
+    "effects": [
+      "Staggered reveal for grid items and tariffs",
+      "Glow pulsing on 'Про' popular badge",
+      "Interactive tariff period / calculator or add-on package toggle",
+      "Form submission success feedback via sonner toast"
+    ]
+  },
+  "instructions_to_main_agent": [
+    "Build a single page React landing page in src/App.js or src/pages/LandingPage.js with clean subcomponents",
+    "Strictly follow the brand presentation data from vmig.ai (rates, prices, 1 mig = 1 sec, slideshow unlimited, contacts vmig.ai@mail.ru)",
+    "Use dark background #070709 with rose/red accent #E11D48 for buttons and primary badges",
+    "Include clear interactive elements: Form with validation submitting data to vmig.ai@mail.ru with Sonner notification",
+    "Ensure responsive bento grid for problem and feature sections",
+    "Add data-testid to all buttons, form inputs, navigation links, and tariff cards"
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "testing_attributes": "Add data-testid to every interactive component (e.g., data-testid='submit-lead-form', data-testid='tariff-card-pro')",
+    "toast_notifications": "Use sonner for form feedback and copying email",
+    "contrast_rules": "Always ensure text on rose/red buttons is crisp white or dark depending on background",
+    "mobile_first": "Ensure mobile menu and mobile view for pricing grid works seamlessly"
+  }
+}
