@@ -94,8 +94,8 @@ export const Pricing = ({ onSelect }) => {
   };
 
   return (
-    <section id="pricing" data-testid="pricing-section" className="relative py-24 sm:py-32 bg-[#0a0a0e]">
-      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-rose-600/10 blur-[140px] pointer-events-none" />
+    <section id="pricing" data-testid="pricing-section" className="relative py-24 sm:py-32 bg-[#181512]">
+      <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-orange-600/10 blur-[140px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
           index="04"
@@ -107,10 +107,10 @@ export const Pricing = ({ onSelect }) => {
         <Reveal>
           <div
             data-testid="mig-calculator"
-            className="mt-12 rounded-2xl border border-white/10 bg-[#121217] p-7 sm:p-9"
+            className="mt-12 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:p-9"
           >
             <div className="flex items-center gap-3">
-              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-rose-600/15 text-rose-500">
+              <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-600/15 text-orange-500">
                 <Calculator size={18} />
               </span>
               <h3 className="font-display text-lg sm:text-xl font-semibold">
@@ -120,7 +120,7 @@ export const Pricing = ({ onSelect }) => {
             <div className="mt-7 grid gap-8 lg:grid-cols-[1.2fr_0.8fr] lg:items-center">
               <div>
                 <div className="flex items-baseline justify-between gap-4">
-                  <label htmlFor="mig-calc-slider" className="text-sm text-slate-400">
+                  <label htmlFor="mig-calc-slider" className="text-sm text-stone-400">
                     Роликов с аватаром в месяц
                   </label>
                   <span data-testid="mig-calc-videos-value" className="font-display text-3xl font-extrabold text-white">
@@ -135,10 +135,10 @@ export const Pricing = ({ onSelect }) => {
                   max={80}
                   value={videos}
                   onChange={(e) => setVideos(Number(e.target.value))}
-                  className="mt-4 w-full accent-rose-600 cursor-pointer"
+                  className="mt-4 w-full accent-orange-600 cursor-pointer"
                 />
                 <div className="mt-5 flex flex-wrap items-center gap-3">
-                  <span className="text-sm text-slate-400">Длина ролика:</span>
+                  <span className="text-sm text-stone-400">Длина ролика:</span>
                   {DURATIONS.map((d) => (
                     <button
                       key={d}
@@ -147,8 +147,8 @@ export const Pricing = ({ onSelect }) => {
                       onClick={() => setDuration(d)}
                       className={`rounded-full px-4 py-2 text-sm font-semibold transition-colors duration-200 ${
                         duration === d
-                          ? "bg-rose-600 text-white"
-                          : "border border-white/15 text-slate-300 hover:border-rose-500/60"
+                          ? "bg-orange-600 text-white"
+                          : "border border-white/15 text-stone-300 hover:border-orange-500/60"
                       }`}
                     >
                       {d} сек
@@ -158,21 +158,21 @@ export const Pricing = ({ onSelect }) => {
               </div>
               <div
                 data-testid="mig-calc-result"
-                className="rounded-xl border border-rose-500/30 bg-rose-600/5 p-6"
+                className="rounded-xl border border-orange-500/30 bg-orange-600/5 p-6"
               >
-                <p className="text-xs text-slate-500">
-                  Вам нужно ≈ <span className="font-semibold text-slate-200">{needMigs} мигов</span> в месяц
+                <p className="text-xs text-stone-500">
+                  Вам нужно ≈ <span className="font-semibold text-stone-200">{needMigs} мигов</span> в месяц
                 </p>
                 <p className="mt-2 font-display text-xl font-bold">
-                  Ваш тариф — <span className="text-rose-500">{recommended.name}</span>
+                  Ваш тариф — <span className="text-orange-500">{recommended.name}</span>
                 </p>
-                <p className="mt-1 text-sm text-slate-400">
+                <p className="mt-1 text-sm text-stone-400">
                   {recommended.price} ₽/мес · ≈ {perVideo} ₽ за ролик
                 </p>
                 <button
                   onClick={() => choose(recommended)}
                   data-testid="mig-calc-cta"
-                  className="mt-4 w-full rounded-full bg-rose-600 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-rose-500"
+                  className="mt-4 w-full rounded-full bg-orange-600 py-3 text-sm font-semibold text-white transition-colors duration-200 hover:bg-orange-500"
                 >
                   Оставить заявку на «{recommended.name}»
                 </button>
@@ -188,14 +188,14 @@ export const Pricing = ({ onSelect }) => {
                 data-testid={`tariff-card-${t.id}`}
                 className={`relative flex h-full flex-col rounded-2xl border p-7 transition-all duration-300 ${
                   t.popular
-                    ? "border-rose-500/60 bg-[#181820] shadow-[0_0_60px_rgba(225,29,72,0.15)] xl:-translate-y-3"
-                    : "border-white/10 bg-[#121217] hover:border-white/25"
-                } ${t.id === recommended.id ? "ring-2 ring-rose-500/70" : ""}`}
+                    ? "border-orange-500/60 bg-[#262219] shadow-[0_0_60px_rgba(232,105,47,0.15)] xl:-translate-y-3"
+                    : "border-white/10 bg-[#201D1A] hover:border-white/25"
+                } ${t.id === recommended.id ? "ring-2 ring-orange-500/70" : ""}`}
               >
                 {t.popular && (
                   <span
                     data-testid="tariff-popular-badge"
-                    className="animate-pulse-glow absolute -top-3.5 left-1/2 -translate-x-1/2 rounded-full bg-rose-600 px-4 py-1.5 font-mono text-[10px] font-bold tracking-widest uppercase text-white"
+                    className="animate-pulse-glow absolute -top-3.5 left-4 rounded-full bg-orange-600 px-4 py-1.5 font-mono text-[10px] font-bold tracking-widest uppercase text-white"
                   >
                     Популярный
                   </span>
@@ -203,28 +203,28 @@ export const Pricing = ({ onSelect }) => {
                 {t.id === recommended.id && (
                   <span
                     data-testid={`tariff-recommended-${t.id}`}
-                    className="absolute -top-3 right-4 rounded-full border border-rose-500/50 bg-[#070709] px-3 py-1 font-mono text-[10px] tracking-widest uppercase text-rose-400"
+                    className="absolute -top-3 right-4 rounded-full border border-orange-500/50 bg-[#141210] px-3 py-1 font-mono text-[10px] tracking-widest uppercase text-orange-400"
                   >
                     Подходит вам
                   </span>
                 )}
-                <p className="text-xs text-slate-500">{t.forWhom}</p>
+                <p className="text-xs text-stone-500">{t.forWhom}</p>
                 <h3 className="mt-1.5 font-display text-2xl font-bold">{t.name}</h3>
                 <div className="mt-5 flex items-baseline gap-1.5">
                   <span className="font-display text-4xl font-extrabold tracking-tight">{t.price}</span>
-                  <span className="text-sm text-slate-400">₽/мес</span>
+                  <span className="text-sm text-stone-400">₽/мес</span>
                 </div>
                 <div className="mt-5 rounded-xl border border-white/10 bg-white/[0.03] p-4">
-                  <p className="flex items-center gap-2 text-sm font-semibold text-rose-400">
+                  <p className="flex items-center gap-2 text-sm font-semibold text-orange-400">
                     <Zap size={14} />
                     {t.migs}
                   </p>
-                  <p className="mt-1 text-xs text-slate-500">{t.migsDesc}</p>
+                  <p className="mt-1 text-xs text-stone-500">{t.migsDesc}</p>
                 </div>
                 <ul className="mt-6 flex-1 space-y-3">
                   {t.features.map((f) => (
-                    <li key={f} className="flex items-start gap-2.5 text-sm text-slate-300">
-                      <Check size={15} className="mt-0.5 shrink-0 text-rose-500" />
+                    <li key={f} className="flex items-start gap-2.5 text-sm text-stone-300">
+                      <Check size={15} className="mt-0.5 shrink-0 text-orange-500" />
                       {f}
                     </li>
                   ))}
@@ -234,8 +234,8 @@ export const Pricing = ({ onSelect }) => {
                   data-testid={`tariff-cta-${t.id}`}
                   className={`mt-7 w-full rounded-full py-3.5 text-sm font-semibold transition-colors duration-200 ${
                     t.popular
-                      ? "bg-rose-600 text-white hover:bg-rose-500"
-                      : "border border-white/15 text-slate-100 hover:border-rose-500/60 hover:text-white"
+                      ? "bg-orange-600 text-white hover:bg-orange-500"
+                      : "border border-white/15 text-stone-100 hover:border-orange-500/60 hover:text-white"
                   }`}
                 >
                   {t.cta}
@@ -248,10 +248,10 @@ export const Pricing = ({ onSelect }) => {
         <Reveal delay={0.2}>
           <div
             data-testid="extra-packages"
-            className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-white/10 bg-[#121217] p-7 sm:flex-row sm:justify-between"
+            className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:flex-row sm:justify-between"
           >
-            <p className="flex items-center gap-3 text-sm font-semibold text-slate-200">
-              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-rose-600/15 text-rose-500">
+            <p className="flex items-center gap-3 text-sm font-semibold text-stone-200">
+              <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-orange-600/15 text-orange-500">
                 <Plus size={16} />
               </span>
               Закончились миги? Докупайте пакетом в любой момент:
@@ -261,7 +261,7 @@ export const Pricing = ({ onSelect }) => {
                 <span
                   key={p.seconds}
                   data-testid={`package-${p.seconds.replace(/\s/g, "-")}`}
-                  className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 text-sm text-slate-300"
+                  className="rounded-full border border-white/10 bg-white/[0.03] px-5 py-2.5 text-sm text-stone-300"
                 >
                   {p.seconds} — <span className="font-semibold text-white">{p.price}</span>
                 </span>

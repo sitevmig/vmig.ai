@@ -28,11 +28,11 @@ export const Problem = () => (
           <Reveal key={s.metric} delay={i * 0.12}>
             <div
               data-testid={`problem-stat-${i}`}
-              className="group h-full rounded-2xl border border-white/10 bg-[#121217] p-7 transition-colors duration-300 hover:border-rose-500/40"
+              className="group h-full rounded-2xl border border-white/10 bg-[#201D1A] p-7 transition-colors duration-300 hover:border-orange-500/40"
             >
-              <p className="font-display text-3xl sm:text-4xl font-bold text-rose-500">{s.metric}</p>
-              <p className="mt-3 text-base font-semibold text-slate-100">{s.label}</p>
-              <p className="mt-2 text-sm text-slate-500">{s.desc}</p>
+              <p className="font-display text-3xl sm:text-4xl font-bold text-orange-500">{s.metric}</p>
+              <p className="mt-3 text-base font-semibold text-stone-100">{s.label}</p>
+              <p className="mt-2 text-sm text-stone-500">{s.desc}</p>
             </div>
           </Reveal>
         ))}
@@ -42,8 +42,8 @@ export const Problem = () => (
         {PAINS.map((pain, i) => (
           <Reveal key={pain} delay={0.1 + i * 0.1}>
             <div className="flex items-start gap-3 rounded-xl border border-white/5 bg-white/[0.03] p-5">
-              <XCircle size={18} className="mt-0.5 shrink-0 text-rose-500" />
-              <p className="text-sm leading-relaxed text-slate-300">{pain}</p>
+              <XCircle size={18} className="mt-0.5 shrink-0 text-orange-500" />
+              <p className="text-sm leading-relaxed text-stone-300">{pain}</p>
             </div>
           </Reveal>
         ))}

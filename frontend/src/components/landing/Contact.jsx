@@ -17,7 +17,7 @@ export const TARIFF_OPTIONS = [
 ];
 
 const inputCls =
-  "w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-slate-100 placeholder:text-slate-600 outline-none transition-colors duration-200 focus:border-rose-500/60 focus:bg-white/[0.06]";
+  "w-full rounded-xl border border-white/10 bg-white/[0.04] px-4 py-3.5 text-sm text-stone-100 placeholder:text-stone-600 outline-none transition-colors duration-200 focus:border-orange-500/60 focus:bg-white/[0.06]";
 
 export const Contact = ({ tariff, onTariffChange }) => {
   const [form, setForm] = useState({ name: "", contact: "", message: "" });
@@ -62,8 +62,8 @@ export const Contact = ({ tariff, onTariffChange }) => {
   };
 
   return (
-    <section id="contacts" data-testid="contacts-section" className="relative py-24 sm:py-32 bg-[#0a0a0e]">
-      <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] rounded-full bg-rose-600/10 blur-[120px] pointer-events-none" />
+    <section id="contacts" data-testid="contacts-section" className="relative py-24 sm:py-32 bg-[#181512]">
+      <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] rounded-full bg-orange-600/10 blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid gap-14 lg:grid-cols-2">
         <div>
           <SectionHead
@@ -75,16 +75,16 @@ export const Contact = ({ tariff, onTariffChange }) => {
 
           <Reveal delay={0.25}>
             <div className="mt-10 space-y-4">
-              <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#121217] p-5">
-                <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-rose-600/15 text-rose-500">
+              <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#201D1A] p-5">
+                <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-orange-600/15 text-orange-500">
                   <Mail size={20} />
                 </span>
                 <div className="min-w-0 flex-1">
-                  <p className="text-xs text-slate-500">Вопросы и подключение</p>
+                  <p className="text-xs text-stone-500">Вопросы и подключение</p>
                   <a
                     href={`mailto:${EMAIL}`}
                     data-testid="contact-email-link"
-                    className="block truncate text-base font-semibold text-white hover:text-rose-400 transition-colors"
+                    className="block truncate text-base font-semibold text-white hover:text-orange-400 transition-colors"
                   >
                     {EMAIL}
                   </a>
@@ -92,18 +92,18 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 <button
                   onClick={copyEmail}
                   data-testid="copy-email-button"
-                  className="p-2.5 rounded-lg border border-white/10 text-slate-400 hover:text-white hover:border-rose-500/50 transition-colors"
+                  className="p-2.5 rounded-lg border border-white/10 text-stone-400 hover:text-white hover:border-orange-500/50 transition-colors"
                   aria-label="Скопировать почту"
                 >
                   <Copy size={16} />
                 </button>
               </div>
-              <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#121217] p-5">
-                <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-rose-600/15 text-rose-500">
+              <div className="flex items-center gap-4 rounded-2xl border border-white/10 bg-[#201D1A] p-5">
+                <span className="flex items-center justify-center w-11 h-11 shrink-0 rounded-xl bg-orange-600/15 text-orange-500">
                   <Clock size={20} />
                 </span>
                 <div>
-                  <p className="text-xs text-slate-500">Скорость ответа</p>
+                  <p className="text-xs text-stone-500">Скорость ответа</p>
                   <p className="text-base font-semibold text-white">В течение рабочего дня</p>
                 </div>
               </div>
@@ -115,11 +115,11 @@ export const Contact = ({ tariff, onTariffChange }) => {
           <form
             onSubmit={submit}
             data-testid="lead-form"
-            className="rounded-2xl border border-white/10 bg-[#121217] p-7 sm:p-9"
+            className="rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:p-9"
           >
             <div className="space-y-5">
               <div>
-                <label htmlFor="lead-name" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <label htmlFor="lead-name" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-400">
                   Ваше имя *
                 </label>
                 <input
@@ -134,7 +134,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 />
               </div>
               <div>
-                <label htmlFor="lead-contact" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <label htmlFor="lead-contact" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-400">
                   Email, телефон или Telegram *
                 </label>
                 <input
@@ -149,7 +149,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 />
               </div>
               <div>
-                <label htmlFor="lead-tariff" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <label htmlFor="lead-tariff" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-400">
                   Интересующий тариф / вопрос
                 </label>
                 <select
@@ -157,7 +157,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                   data-testid="lead-tariff-select"
                   value={tariff}
                   onChange={(e) => onTariffChange(e.target.value)}
-                  className={`${inputCls} appearance-none cursor-pointer [&>option]:bg-[#121217]`}
+                  className={`${inputCls} appearance-none cursor-pointer [&>option]:bg-[#201D1A]`}
                 >
                   {TARIFF_OPTIONS.map((o) => (
                     <option key={o} value={o}>
@@ -167,7 +167,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 </select>
               </div>
               <div>
-                <label htmlFor="lead-message" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-slate-400">
+                <label htmlFor="lead-message" className="mb-2 block text-xs font-semibold uppercase tracking-wider text-stone-400">
                   Комментарий или задача
                 </label>
                 <textarea
@@ -185,7 +185,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 type="submit"
                 disabled={loading}
                 data-testid="lead-submit-button"
-                className="group flex w-full items-center justify-center gap-2 rounded-full bg-rose-600 py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-rose-500 hover:shadow-[0_0_40px_rgba(225,29,72,0.35)] disabled:opacity-60 disabled:cursor-not-allowed"
+                className="group flex w-full items-center justify-center gap-2 rounded-full bg-orange-600 py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-[0_0_40px_rgba(232,105,47,0.35)] disabled:opacity-60 disabled:cursor-not-allowed"
               >
                 {loading ? (
                   <Loader2 size={18} className="animate-spin" />
@@ -194,7 +194,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
                 )}
                 {loading ? "Отправляем..." : "Отправить заявку в Вмиг"}
               </button>
-              <p className="text-center text-xs text-slate-600">
+              <p className="text-center text-xs text-stone-600">
                 Нажимая кнопку, вы соглашаетесь на обработку заявки командой Вмиг
               </p>
             </div>

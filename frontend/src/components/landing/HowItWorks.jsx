@@ -6,19 +6,19 @@ const STEPS = [
     step: "01",
     icon: PenLine,
     title: "Опишите задачу",
-    desc: "Введите текст или опишите ролик своими словами. Или просто загрузите нужные фото.",
+    desc: "Введите свой текст или используйте автоматический промпт. Загрузите фото и видео для использования в ролике.",
   },
   {
     step: "02",
     icon: Sparkles,
-    title: "Платформа генерирует",
+    title: "Платформа сгенерирует",
     desc: "ИИ создаёт видео с аватаром, озвучкой и синхронной артикуляцией на русском языке.",
   },
   {
     step: "03",
     icon: Share2,
-    title: "Скачивайте и публикуйте",
-    desc: "Готовый вертикальный ролик под Reels, TikTok, Shorts и VK Клипы.",
+    title: "Публикуйте через автопостинг",
+    desc: "Готовый вертикальный ролик сам уходит в Reels, TikTok, Shorts и VK Клипы.",
   },
 ];
 
@@ -29,7 +29,7 @@ const FEATURES = [
 ];
 
 export const HowItWorks = () => (
-  <section id="how-it-works" data-testid="how-it-works-section" className="relative py-24 sm:py-32 bg-[#0a0a0e]">
+  <section id="how-it-works" data-testid="how-it-works-section" className="relative py-24 sm:py-32 bg-[#181512]">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
       <SectionHead
         index="02"
@@ -43,16 +43,16 @@ export const HowItWorks = () => (
           <Reveal key={step} delay={i * 0.12}>
             <div
               data-testid={`step-card-${step}`}
-              className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-[#121217] p-7 transition-colors duration-300 hover:border-rose-500/40"
+              className="group relative h-full overflow-hidden rounded-2xl border border-white/10 bg-[#201D1A] p-7 transition-colors duration-300 hover:border-orange-500/40"
             >
-              <span className="pointer-events-none absolute -top-4 right-4 font-display text-7xl font-extrabold text-white/[0.04] transition-colors duration-300 group-hover:text-rose-600/10">
+              <span className="pointer-events-none absolute -top-4 right-4 font-display text-7xl font-extrabold text-white/[0.04] transition-colors duration-300 group-hover:text-orange-600/10">
                 {step}
               </span>
-              <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-rose-600/15 text-rose-500">
+              <span className="flex items-center justify-center w-11 h-11 rounded-xl bg-orange-600/15 text-orange-500">
                 <Icon size={20} />
               </span>
               <h3 className="mt-5 font-display text-lg sm:text-xl font-semibold">{title}</h3>
-              <p className="mt-3 text-sm leading-relaxed text-slate-400">{desc}</p>
+              <p className="mt-3 text-sm leading-relaxed text-stone-400">{desc}</p>
             </div>
           </Reveal>
         ))}
@@ -61,13 +61,13 @@ export const HowItWorks = () => (
       <div className="mt-6 grid gap-4 md:grid-cols-3">
         {FEATURES.map(({ icon: Icon, title, desc }, i) => (
           <Reveal key={title} delay={0.15 + i * 0.1}>
-            <div className="flex items-start gap-4 rounded-xl border border-white/5 bg-white/[0.03] p-5">
-              <span className="flex items-center justify-center w-9 h-9 shrink-0 rounded-lg bg-white/5 text-rose-400">
+            <div className="flex h-full items-start gap-4 rounded-xl border border-white/5 bg-white/[0.03] p-5">
+              <span className="flex items-center justify-center w-9 h-9 shrink-0 rounded-lg bg-white/5 text-orange-400">
                 <Icon size={16} />
               </span>
               <div>
-                <p className="text-sm font-semibold text-slate-100">{title}</p>
-                <p className="mt-1 text-sm text-slate-500">{desc}</p>
+                <p className="text-sm font-semibold text-stone-100">{title}</p>
+                <p className="mt-1 text-sm text-stone-500">{desc}</p>
               </div>
             </div>
           </Reveal>

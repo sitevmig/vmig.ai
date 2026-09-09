@@ -17,7 +17,7 @@ export const SectionHead = ({ index, eyebrow, title, subtitle }) => (
     <Reveal>
       <p
         data-testid={`section-${index}-eyebrow`}
-        className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-rose-500"
+        className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-orange-500"
       >
         {index} — {eyebrow}
       </p>
@@ -29,7 +29,7 @@ export const SectionHead = ({ index, eyebrow, title, subtitle }) => (
     </Reveal>
     {subtitle && (
       <Reveal delay={0.2}>
-        <p className="mt-4 text-base sm:text-lg leading-relaxed text-slate-400">{subtitle}</p>
+        <p className="mt-4 text-base sm:text-lg leading-relaxed text-stone-400">{subtitle}</p>
       </Reveal>
     )}
   </div>

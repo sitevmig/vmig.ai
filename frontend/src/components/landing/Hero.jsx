@@ -1,6 +1,6 @@
 import { useRef } from "react";
 import { motion, useScroll, useTransform } from "framer-motion";
-import { Zap, Gift, CreditCard, Play, CheckCircle2 } from "lucide-react";
+import { Zap, Gift, CreditCard, CheckCircle2 } from "lucide-react";
 
 const Line = ({ children, delay }) => (
   <span className="block overflow-hidden pb-1">
@@ -29,27 +29,17 @@ export const Hero = () => {
 
   return (
     <section id="hero" ref={ref} data-testid="hero-section" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-rose-600/15 blur-[140px] pointer-events-none" />
+      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-orange-600/15 blur-[140px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">
         <motion.div style={{ y: yText }}>
-          <motion.p
-            initial={{ opacity: 0 }}
-            animate={{ opacity: 1 }}
-            transition={{ duration: 0.6 }}
-            data-testid="hero-eyebrow"
-            className="font-mono text-xs sm:text-sm tracking-[0.3em] uppercase text-rose-500"
-          >
-            ИИ-платформа видеоконтента — vmig.ai
-          </motion.p>
-
           <h1
             data-testid="hero-title"
-            className="mt-6 font-display font-extrabold tracking-tight leading-[1.02] text-4xl sm:text-5xl lg:text-6xl"
+            className="font-display font-extrabold tracking-tight leading-[1.02] text-4xl sm:text-5xl lg:text-6xl"
           >
             <Line delay={0.15}>Вмиг делает</Line>
             <Line delay={0.28}>
-              <span className="text-rose-500">ролик</span> за минуты,
+              <span className="text-orange-500">ролик</span> за минуты,
             </Line>
             <Line delay={0.41}>а не за недели</Line>
           </h1>
@@ -59,7 +49,7 @@ export const Hero = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.6 }}
             data-testid="hero-subtitle"
-            className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-slate-400"
+            className="mt-6 max-w-xl text-base sm:text-lg leading-relaxed text-stone-400"
           >
             Рекламные видео для Reels, TikTok, Shorts и VK Клипов с ИИ-аватаром и живым русским
             липсинком. Без съёмки, монтажёра и подрядчика — только браузер и пять минут.
@@ -74,9 +64,9 @@ export const Hero = () => {
             {HIGHLIGHTS.map(({ icon: Icon, text }) => (
               <span
                 key={text}
-                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm text-slate-300"
+                className="inline-flex items-center gap-2 rounded-full border border-white/10 bg-white/5 px-4 py-2 text-xs sm:text-sm text-stone-300"
               >
-                <Icon size={14} className="text-rose-500" />
+                <Icon size={14} className="text-orange-500" />
                 {text}
               </span>
             ))}
@@ -91,7 +81,7 @@ export const Hero = () => {
             <a
               href="#contacts"
               data-testid="hero-cta-primary"
-              className="group inline-flex items-center gap-2 rounded-full bg-rose-600 px-7 py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-rose-500 hover:shadow-[0_0_40px_rgba(225,29,72,0.4)]"
+              className="group inline-flex items-center gap-2 rounded-full bg-orange-600 px-7 py-4 text-sm sm:text-base font-semibold text-white transition-all duration-300 hover:bg-orange-500 hover:shadow-[0_0_40px_rgba(232,105,47,0.4)]"
             >
               Создать первый ролик бесплатно
               <Zap size={16} className="transition-transform duration-300 group-hover:scale-125" />
@@ -99,7 +89,7 @@ export const Hero = () => {
             <a
               href="#pricing"
               data-testid="hero-cta-secondary"
-              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm sm:text-base font-semibold text-slate-200 transition-colors duration-300 hover:border-rose-500/60 hover:text-white"
+              className="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-4 text-sm sm:text-base font-semibold text-stone-200 transition-colors duration-300 hover:border-orange-500/60 hover:text-white"
             >
               Посмотреть тарифы
             </a>
@@ -112,25 +102,24 @@ export const Hero = () => {
             animate={{ opacity: 1, scale: 1, rotate: 3 }}
             transition={{ duration: 1, delay: 0.5, ease: [0.22, 1, 0.36, 1] }}
             data-testid="hero-phone"
-            className="relative rounded-[2.5rem] border border-white/15 bg-[#121217] p-2.5 shadow-[0_40px_120px_rgba(225,29,72,0.25)]"
+            className="relative rounded-[2.5rem] border border-white/15 bg-[#201D1A] p-2.5 shadow-[0_40px_120px_rgba(232,105,47,0.25)]"
           >
             <div className="relative overflow-hidden rounded-[2rem] aspect-[9/19]">
-              <img
-                src="https://images.unsplash.com/photo-1733937109153-9766651fbe12?crop=entropy&cs=srgb&fm=jpg&q=85&w=640"
-                alt="ИИ-аватар Вмиг"
+              <video
+                src="/videos/ex2.mp4"
+                poster="/videos/poster-avatar.jpg"
+                autoPlay
+                muted
+                loop
+                playsInline
+                data-testid="hero-video"
                 className="h-full w-full object-cover"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-[#070709]/90 via-transparent to-[#070709]/30" />
+              <div className="absolute inset-0 bg-gradient-to-t from-[#141210]/60 via-transparent to-[#141210]/30 pointer-events-none" />
               <div className="absolute top-4 left-1/2 -translate-x-1/2 w-20 h-5 rounded-full bg-black/70" />
-              <div className="absolute bottom-5 inset-x-4 flex items-center gap-3">
-                <span className="flex items-center justify-center w-11 h-11 rounded-full bg-rose-600 text-white animate-pulse-glow">
-                  <Play size={18} className="ml-0.5" />
-                </span>
-                <div>
-                  <p className="text-sm font-semibold">Ролик готов</p>
-                  <p className="text-xs text-slate-400">00:15 · 720p · 9:16</p>
-                </div>
-              </div>
+              <span className="absolute bottom-4 left-4 rounded-full bg-[#141210]/80 backdrop-blur px-3 py-1.5 font-mono text-[10px] tracking-widest uppercase text-orange-400">
+                Реальный ролик Вмиг
+              </span>
             </div>
           </motion.div>
 
@@ -138,20 +127,20 @@ export const Hero = () => {
             initial={{ opacity: 0, x: -24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 1.1 }}
-            className="animate-float absolute -left-16 top-16 hidden sm:flex items-center gap-2 rounded-xl border border-white/10 bg-[#121217]/90 backdrop-blur px-4 py-3"
+            className="animate-float absolute -left-16 top-16 hidden sm:flex items-center gap-2 rounded-xl border border-white/10 bg-[#201D1A]/90 backdrop-blur px-4 py-3"
           >
             <CheckCircle2 size={16} className="text-emerald-400" />
-            <span className="text-xs font-medium text-slate-200">Русский липсинк 100%</span>
+            <span className="text-xs font-medium text-stone-200">Русский липсинк 100%</span>
           </motion.div>
           <motion.div
             initial={{ opacity: 0, x: 24 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.7, delay: 1.25 }}
-            className="animate-float absolute -right-12 bottom-24 hidden sm:block rounded-xl border border-white/10 bg-[#121217]/90 backdrop-blur px-4 py-3"
+            className="animate-float absolute -right-12 bottom-24 hidden sm:block rounded-xl border border-white/10 bg-[#201D1A]/90 backdrop-blur px-4 py-3"
             style={{ animationDelay: "1.5s" }}
           >
-            <p className="font-mono text-[10px] tracking-widest uppercase text-rose-500">Форматы</p>
-            <p className="mt-1 text-xs font-medium text-slate-200">Reels · TikTok · Shorts</p>
+            <p className="font-mono text-[10px] tracking-widest uppercase text-orange-500">Форматы</p>
+            <p className="mt-1 text-xs font-medium text-stone-200">Reels · TikTok · Shorts</p>
           </motion.div>
         </motion.div>
       </div>

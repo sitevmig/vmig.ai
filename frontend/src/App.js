@@ -45,7 +45,7 @@ function App() {
   }, []);
 
   return (
-    <div className="min-h-screen bg-[#070709] text-slate-50 overflow-x-clip">
+    <div className="min-h-screen bg-[#141210] text-stone-50 overflow-x-clip">
       <div className="grain-overlay" />
       <Toaster theme="dark" position="top-center" richColors />
       <Navbar />
