@@ -94,7 +94,7 @@ export const Pricing = ({ onSelect }) => {
   };
 
   return (
-    <section id="pricing" data-testid="pricing-section" className="relative py-24 sm:py-32 bg-[#181512]">
+    <section id="pricing" data-testid="pricing-section" className="relative py-16 sm:py-20 bg-[#181512]">
       <div className="absolute top-1/3 left-1/2 -translate-x-1/2 w-[700px] h-[400px] rounded-full bg-orange-600/10 blur-[140px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
@@ -107,7 +107,7 @@ export const Pricing = ({ onSelect }) => {
         <Reveal>
           <div
             data-testid="mig-calculator"
-            className="mt-12 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:p-9"
+            className="mt-8 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:p-9"
           >
             <div className="flex items-center gap-3">
               <span className="flex items-center justify-center w-10 h-10 rounded-xl bg-orange-600/15 text-orange-500">
@@ -181,7 +181,7 @@ export const Pricing = ({ onSelect }) => {
           </div>
         </Reveal>
 
-        <div className="mt-10 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 xl:grid-cols-4">
           {TARIFFS.map((t, i) => (
             <Reveal key={t.id} delay={i * 0.1} className="h-full">
               <div
@@ -248,7 +248,7 @@ export const Pricing = ({ onSelect }) => {
         <Reveal delay={0.2}>
           <div
             data-testid="extra-packages"
-            className="mt-10 flex flex-col items-center gap-5 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:flex-row sm:justify-between"
+            className="mt-8 flex flex-col items-center gap-5 rounded-2xl border border-white/10 bg-[#201D1A] p-7 sm:flex-row sm:justify-between"
           >
             <p className="flex items-center gap-3 text-sm font-semibold text-stone-200">
               <span className="flex items-center justify-center w-9 h-9 rounded-lg bg-orange-600/15 text-orange-500">

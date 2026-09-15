@@ -13,7 +13,7 @@ import { Trial } from "@/components/landing/Trial";
 import { Contact } from "@/components/landing/Contact";
 import { Footer } from "@/components/landing/Footer";
 
-export const DEFAULT_TARIFF = "Тестовый доступ (5 роликов бесплатно)";
+export const DEFAULT_TARIFF = "Тестовый доступ (3 ролика бесплатно)";
 
 function App() {
   const [tariff, setTariff] = useState(DEFAULT_TARIFF);

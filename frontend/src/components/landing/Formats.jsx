@@ -25,7 +25,7 @@ export const Formats = () => {
   const active = openIdx !== null ? FORMATS[openIdx] : null;
 
   return (
-    <section id="formats" data-testid="formats-section" className="relative py-24 sm:py-32">
+    <section id="formats" data-testid="formats-section" className="relative py-16 sm:py-20">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
         <SectionHead
           index="03"
@@ -34,7 +34,7 @@ export const Formats = () => {
           subtitle="Ролики генерируются под форматы Reels, TikTok, Shorts и VK Клипы. Нажмите «Смотреть пример» — видео откроется прямо на странице."
         />
 
-        <div className="mx-auto mt-14 grid max-w-4xl gap-5 md:grid-cols-2">
+        <div className="mx-auto mt-10 grid max-w-4xl gap-5 md:grid-cols-2">
           {FORMATS.map((f, i) => (
             <Reveal key={f.title} delay={i * 0.12}>
               <div

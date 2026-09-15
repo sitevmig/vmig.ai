@@ -14,7 +14,7 @@ const PAINS = [
 ];
 
 export const Problem = () => (
-  <section id="problem" data-testid="problem-section" className="relative py-24 sm:py-32">
+  <section id="problem" data-testid="problem-section" className="relative py-16 sm:py-20">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
       <SectionHead
         index="01"
@@ -23,7 +23,7 @@ export const Problem = () => (
         subtitle="При таких ценах малый бизнес выпускает один-два ролика — или не выпускает вовсе. Знакомо?"
       />
 
-      <div className="mt-14 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-3">
         {STATS.map((s, i) => (
           <Reveal key={s.metric} delay={i * 0.12}>
             <div

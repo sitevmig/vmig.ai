@@ -29,7 +29,7 @@ const FEATURES = [
 ];
 
 export const HowItWorks = () => (
-  <section id="how-it-works" data-testid="how-it-works-section" className="relative py-24 sm:py-32 bg-[#181512]">
+  <section id="how-it-works" data-testid="how-it-works-section" className="relative py-16 sm:py-20 bg-[#181512]">
     <div className="mx-auto max-w-7xl px-5 sm:px-8">
       <SectionHead
         index="02"
@@ -38,7 +38,7 @@ export const HowItWorks = () => (
         subtitle="Никакой съёмки, микрофона и монтажной программы. Опишите, что нужно сказать, — остальное платформа берёт на себя."
       />
 
-      <div className="mt-14 grid gap-5 md:grid-cols-3">
+      <div className="mt-10 grid gap-5 md:grid-cols-3">
         {STEPS.map(({ step, icon: Icon, title, desc }, i) => (
           <Reveal key={step} delay={i * 0.12}>
             <div

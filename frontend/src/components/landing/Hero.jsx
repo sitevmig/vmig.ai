@@ -17,7 +17,7 @@ const Line = ({ children, delay }) => (
 
 const HIGHLIGHTS = [
   { icon: Zap, text: "5 минут от идеи до ролика" },
-  { icon: Gift, text: "Первые 5 роликов бесплатно" },
+  { icon: Gift, text: "Первые три ролика бесплатно" },
   { icon: CreditCard, text: "Без привязки карты" },
 ];
 
@@ -28,7 +28,7 @@ export const Hero = () => {
   const yText = useTransform(scrollYProgress, [0, 1], [0, 60]);
 
   return (
-    <section id="hero" ref={ref} data-testid="hero-section" className="relative pt-32 pb-20 sm:pt-40 sm:pb-28">
+    <section id="hero" ref={ref} data-testid="hero-section" className="relative pt-24 pb-14 sm:pt-28 sm:pb-20">
       <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[900px] h-[500px] rounded-full bg-orange-600/15 blur-[140px] pointer-events-none" />
 
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid lg:grid-cols-[1.15fr_0.85fr] gap-16 items-center">

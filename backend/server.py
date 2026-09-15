@@ -133,7 +133,7 @@ async def send_email(*, to: str, subject: str, html: str, reply_to: str | None =
 class LeadCreate(BaseModel):
     name: str = Field(min_length=1, max_length=120)
     contact: str = Field(min_length=3, max_length=200)
-    tariff: str = Field(default="Тестовый доступ (5 роликов бесплатно)", max_length=120)
+    tariff: str = Field(default="Тестовый доступ (3 ролика бесплатно)", max_length=120)
     message: str = Field(default="", max_length=2000)
 
 

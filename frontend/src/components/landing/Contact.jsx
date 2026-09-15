@@ -4,11 +4,12 @@ import { toast } from "sonner";
 import { Mail, Copy, Send, Loader2, Clock } from "lucide-react";
 import { Reveal, SectionHead } from "./Reveal";
 
-const API = `${process.env.REACT_APP_BACKEND_URL}/api`;
+const BACKEND_URL = process.env.REACT_APP_BACKEND_URL;
+const API = `${BACKEND_URL && BACKEND_URL !== "undefined" ? BACKEND_URL : ""}/api`;
 const EMAIL = "vmig.ai@mail.ru";
 
 export const TARIFF_OPTIONS = [
-  "Тестовый доступ (5 роликов бесплатно)",
+  "Тестовый доступ (3 ролика бесплатно)",
   "Старт (1 990 ₽)",
   "Про (5 500 ₽)",
   "Макс (11 900 ₽)",
@@ -62,7 +63,7 @@ export const Contact = ({ tariff, onTariffChange }) => {
   };
 
   return (
-    <section id="contacts" data-testid="contacts-section" className="relative py-24 sm:py-32 bg-[#181512]">
+    <section id="contacts" data-testid="contacts-section" className="relative py-16 sm:py-20 bg-[#181512]">
       <div className="absolute bottom-0 left-1/4 w-[500px] h-[300px] rounded-full bg-orange-600/10 blur-[120px] pointer-events-none" />
       <div className="relative mx-auto max-w-7xl px-5 sm:px-8 grid gap-14 lg:grid-cols-2">
         <div>

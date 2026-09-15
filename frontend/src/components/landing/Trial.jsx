@@ -3,12 +3,12 @@ import { Reveal } from "./Reveal";
 
 const STEPS = [
   { icon: Zap, num: "1", title: "Регистрация", text: "2 минуты, без привязки банковской карты" },
-  { icon: Gift, num: "2", title: "5 роликов бесплатно", text: "Генерация в тот же день" },
+  { icon: Gift, num: "2", title: "Три ролика бесплатно", text: "Генерация в тот же день" },
   { icon: HeartHandshake, num: "3", title: "Оплата", text: "Только если понравится результат" },
 ];
 
 export const Trial = () => (
-  <section id="trial" data-testid="trial-section" className="relative py-24 sm:py-32">
+  <section id="trial" data-testid="trial-section" className="relative py-16 sm:py-20">
     <div className="mx-auto max-w-5xl px-5 sm:px-8">
       <Reveal>
         <div className="relative overflow-hidden rounded-3xl border border-orange-500/30 bg-gradient-to-b from-[#262219] to-[#1B1815] p-10 sm:p-14 text-center">
@@ -20,7 +20,7 @@ export const Trial = () => (
             data-testid="trial-title"
             className="relative mt-4 font-display text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight"
           >
-            Первые пять роликов — бесплатно
+            Первые три ролика — бесплатно
           </h2>
           <p className="relative mt-4 text-base sm:text-lg text-stone-400">
             Посмотрите на результат, прежде чем принимать решение.
